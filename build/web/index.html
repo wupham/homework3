@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Value Calculator</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="homework2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="main">
+            <h1>Value Calculator</h1>
+            <form action="goElon" method="post">
+                <input type="hidden" name="action" value="add">   
+                <label>Investment Amount</label>
+                <input type="text" name="Amount">
+                <br>
+                <label>Yearly Interest Rate</label>
+                <input type="text" name="Rate">
+                <br>
+                <label>Number of Years</label>
+                <input type="text" name="Years">
+                <br>
+                <input class="button" type="submit" value="Calculate">
+            </form>
+        </div>
+        <div id="footer">
+            <p>&copy; 2016 Wes Upham and Sarah Hennenkamp</p>
+        </div>
+    </body>
+</html>

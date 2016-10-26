@@ -1,0 +1,26 @@
+.main {
+    border-color: blue;
+    border-style: solid;
+    border-width: .2em;
+    text-align: center;
+}
+form {
+    margin: auto;
+}
+
+label {
+    display: inline-block;
+    width: 10em;
+    text-align: right;
+    padding: .2em;
+}
+
+input {
+    display: inline-block;
+    text-align: left;
+}
+
+.button {
+    background-color: grey;
+    color: black;
+}
