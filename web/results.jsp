@@ -15,12 +15,12 @@ and open the template in the editor.
     <head>
         <title>Value Calculator</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="homework2.css">
+        <link rel="stylesheet" type="text/css" href="styles/homework2.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="main">
-            <h1>Value Calculator</h1>
+            <h1>Future Value Calculator</h1>
             <p>Investment Amount:   Result</p>
             <p>Yearly Interest Rate:   Result</p>
             <p>Number of Years:   Result</p>

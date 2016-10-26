@@ -45,7 +45,7 @@ public class CalculateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                String url = "/index.jsp";
+                String url = "/index.html";
         
         // get current action
         String action = request.getParameter("action");
@@ -55,31 +55,40 @@ public class CalculateServlet extends HttpServlet {
 
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/index.jsp";    // the "join" page
+            url = "/index.html";    // the "join" page
         } 
         else if (action.equals("add")) {
             // get parameters from the request
-            String Amount = request.getParameter("Amount");
-            String Rate = request.getParameter("Rate");
-            String Years = request.getParameter("Years");
+            String amount = request.getParameter("Amount");
+            String rate = request.getParameter("Rate");
+            String years = request.getParameter("Years");
             
             // store data in User object
 
 
             // validate the parameters
-            String message;
-            if (firstName == null || lastName == null || email == null ||
-                firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
-                message = "Please fill out all three text boxes.";
-                url = "/index.jsp";
+            //String message;
+            if (amount == null || rate == null ||years == null ||
+                amount.isEmpty() || rate.isEmpty() || years.isEmpty()) {
+                //message = "Please fill out all three text boxes.";
+                url = "/index.html";
             } 
             else {
-                message = "";
+                //message = "";
                 url = "/result.jsp";
  
             }
+            
+            //TODO: make sure the values user enters are ints
+            //TODO: make a method that calculates things
+            
+            
+            request.setAttribute("amount", amount);
+            request.setAttribute("rate", rate);
+            request.setAttribute("years", years);
+            
             //request.setAttribute("user", user);
-            request.setAttribute("message", message);
+            //request.setAttribute("message", message);
         }
         getServletContext()
                 .getRequestDispatcher(url)
