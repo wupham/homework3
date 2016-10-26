@@ -1,26 +1,16 @@
-<%-- 
-    Document   : results
-    Created on : Oct 25, 2016, 2:51:17 PM
-    Author     : Wesley
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!--Copyright © 2016 Wes Upham and Sarah Hennenkamp--> 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
-        <title>Value Calculator</title>
+        <title>CSC330 Homework 2</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="homework2.css">
+        <link rel="stylesheet" type="text/css" href="styles/result.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="main">
-            <h1>Value Calculator</h1>
+            <h1>Future Value Calculator</h1>
             <p>Investment Amount:   Result</p>
             <p>Yearly Interest Rate:   Result</p>
             <p>Number of Years:   Result</p>

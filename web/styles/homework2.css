@@ -1,3 +1,7 @@
+/* 
+    Created on : Oct 25, 2016, 4:22:30 PM
+    Copyright © 2016 Wes Upham and Sarah Hennenkamp
+*/
 .main {
     border-color: blue;
     border-style: solid;
@@ -23,4 +27,20 @@ input {
 .button {
     background-color: grey;
     color: black;
+}
+
+h1 {
+    color: blue;
+}
+
+#footer {
+    border-color: blue;
+    border-style: solid;
+    border-width: .2em;
+    padding-right: .5em;
+    text-align: left;
+}
+
+#footer.p {
+    padding-left: .5em;
 }
