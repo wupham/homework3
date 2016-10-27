@@ -13,6 +13,7 @@
                 <label>Number of Years</label>
                 <input type="number" min="0" name="Years" placeholder="Integer number of years">
                 <br>
+                <label></label>
                 <input class="button" type="submit" value="Calculate">
             </form>
         </div>
