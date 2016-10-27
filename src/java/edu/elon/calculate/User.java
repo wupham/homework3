@@ -1,3 +1,6 @@
+/*
+ <!--Copyright © 2016 Wes Upham and Sarah Hennenkamp--> 
+ */
 package edu.elon.calculate;
 
 import java.io.Serializable;
