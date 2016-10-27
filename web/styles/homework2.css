@@ -2,14 +2,21 @@
     Created on : Oct 25, 2016, 4:22:30 PM
     Copyright © 2016 Wes Upham and Sarah Hennenkamp
 */
-.main {
+.main{
     border-color: blue;
     border-style: solid;
-    border-width: .2em;
+    border-top-width: .2em;
+    border-left-width: .2em;
+    border-right-width: .2em;
+    border-bottom-width: 0em;
+    padding-bottom: 2em;
+}
+.main form {
     text-align: center;
 }
-form {
-    margin: auto;
+
+.main p {
+    margin-left: 5em;
 }
 
 label {
@@ -27,20 +34,23 @@ input {
 .button {
     background-color: grey;
     color: black;
+    margin-right: 6.5em;
 }
 
-h1 {
-    color: blue;
+.main h1 {
+    color: navy;
+    text-align: left;
+    margin-left: 2.5em;
 }
 
 #footer {
     border-color: blue;
     border-style: solid;
-    border-width: .2em;
+    border-top-width: .2em;
     padding-right: .5em;
-    text-align: left;
 }
 
-#footer.p {
-    padding-left: .5em;
+#footer p {
+    text-align: left;
+    margin-left: 5em;
 }

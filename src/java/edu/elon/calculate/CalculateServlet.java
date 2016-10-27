@@ -66,11 +66,23 @@ public class CalculateServlet extends HttpServlet {
 
 
             // validate the parameters
+<<<<<<< HEAD
+            String message;
+            if (Amount == null || Rate == null || Years == null ||
+                Amount.isEmpty() || Rate.isEmpty() || Years.isEmpty()) {
+                message = "Please fill out all three text boxes.";
+                url = "/index.jsp";
+=======
             //String message;
             if (amount == null || rate == null ||years == null ||
                 amount.isEmpty() || rate.isEmpty() || years.isEmpty()) {
                 //message = "Please fill out all three text boxes.";
+<<<<<<< HEAD
                 url = "/calculate.html";
+=======
+                url = "/index.html";
+>>>>>>> ac44033cbcc71d4fbed7d18dbbe9e12b84d95c8b
+>>>>>>> 2cfc0cf0ffb5b1c1af7d5a46a0fbbfffdce854f5
             } 
             else {
                 //message = "";
