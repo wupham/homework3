@@ -1,5 +1,4 @@
-
-
+<!--Copyright © 2016 Wes Upham and Sarah Hennenkamp--> 
 <%@ include file="/includes/header.html"%>
         <div class="main">
 					<jsp:useBean id="user" scope="request" class="edu.elon.calculate.User"/>
