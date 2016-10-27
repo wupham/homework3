@@ -45,7 +45,7 @@ public class CalculateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                String url = "/calculate.html";
+        String url = "/calculate.jsp";
         
         // get current action
         String action = request.getParameter("action");
@@ -55,7 +55,7 @@ public class CalculateServlet extends HttpServlet {
 
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/calculate.html";    // the "join" page
+            url = "/calculate.jsp";    // the "join" page
         } 
         else if (action.equals("add")) {
             // get parameters from the request
@@ -63,31 +63,16 @@ public class CalculateServlet extends HttpServlet {
             String rate = request.getParameter("Rate");
             String years = request.getParameter("Years");
             
-
-
             // validate the parameters
-<<<<<<< HEAD
-            String message;
-            if (Amount == null || Rate == null || Years == null ||
-                Amount.isEmpty() || Rate.isEmpty() || Years.isEmpty()) {
-                message = "Please fill out all three text boxes.";
-                url = "/index.jsp";
-=======
-            //String message;
-            if (amount == null || rate == null ||years == null ||
+
+            if (amount == null || rate == null || years == null ||
                 amount.isEmpty() || rate.isEmpty() || years.isEmpty()) {
                 //message = "Please fill out all three text boxes.";
-<<<<<<< HEAD
-                url = "/calculate.html";
-=======
-                url = "/index.html";
->>>>>>> ac44033cbcc71d4fbed7d18dbbe9e12b84d95c8b
->>>>>>> 2cfc0cf0ffb5b1c1af7d5a46a0fbbfffdce854f5
-            } 
+                url = "/calculate.jsp";
+						}
             else {
                 //message = "";
                 url = "/results.jsp";
- 
             }
             
             double amountd = Double.parseDouble(amount);
@@ -111,12 +96,14 @@ public class CalculateServlet extends HttpServlet {
                 .getRequestDispatcher(url)
                 .forward(request, response);
     }
-		
+	
+
 		private double doMath (double amount, double rate, double years) {
 			double value = 0;
 			rate = rate/100;
 			value = amount*Math.pow((1+(rate)),years);
 			return value;
 		}
+}
+
 		
-    }
