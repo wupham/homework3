@@ -1,5 +1,5 @@
 /*
- <!--Copyright © 2016 Wes Upham and Sarah Hennenkamp--> 
+ Copyright © 2016 Wes Upham and Sarah Hennenkamp
  */
 package edu.elon.calculate;
 
@@ -7,24 +7,24 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
-    private String amount;
-    private String rate;
-    private String years;
-		private String value;
+	private String amount;
+	private String rate;
+	private String years;
+	private String value;
 
-    public User() {
-        amount = "";
-        rate = "";
-        years = "";
-				value="";
-    }
+	public User() {
+		amount = "";
+		rate = "";
+		years = "";
+		value = "";
+	}
 
-    public User(String amount, String rate, String years, String value) {
-        this.amount = amount;
-        this.rate = rate;
-				this.years = years;
-        this.value = value;
-    }
+	public User(String amount, String rate, String years, String value) {
+		this.amount = amount;
+		this.rate = rate;
+		this.years = years;
+		this.value = value;
+	}
 
 	/**
 	 * @return the amount
@@ -81,5 +81,4 @@ public class User implements Serializable {
 	public void setValue(String value) {
 		this.value = value;
 	}
-
 }
