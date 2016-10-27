@@ -6,7 +6,7 @@
 package edu.elon.calculate;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.text.NumberFormat;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -45,7 +45,7 @@ public class CalculateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                String url = "/index.html";
+                String url = "/calculate.html";
         
         // get current action
         String action = request.getParameter("action");
@@ -55,7 +55,7 @@ public class CalculateServlet extends HttpServlet {
 
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/index.html";    // the "join" page
+            url = "/calculate.html";    // the "join" page
         } 
         else if (action.equals("add")) {
             // get parameters from the request
@@ -63,7 +63,6 @@ public class CalculateServlet extends HttpServlet {
             String rate = request.getParameter("Rate");
             String years = request.getParameter("Years");
             
-            // store data in User object
 
 
             // validate the parameters
@@ -71,27 +70,41 @@ public class CalculateServlet extends HttpServlet {
             if (amount == null || rate == null ||years == null ||
                 amount.isEmpty() || rate.isEmpty() || years.isEmpty()) {
                 //message = "Please fill out all three text boxes.";
-                url = "/index.html";
+                url = "/calculate.html";
             } 
             else {
                 //message = "";
-                url = "/result.jsp";
+                url = "/results.jsp";
  
             }
             
-            //TODO: make sure the values user enters are ints
-            //TODO: make a method that calculates things
+            double amountd = Double.parseDouble(amount);
+						double rated = Double.parseDouble(rate);
+						double yearsd = Double.parseDouble(years);
+
+						double value = doMath(amountd, rated, yearsd);
             
-            
-            request.setAttribute("amount", amount);
-            request.setAttribute("rate", rate);
-            request.setAttribute("years", years);
-            
-            //request.setAttribute("user", user);
+						NumberFormat formatter = NumberFormat.getCurrencyInstance();
+						
+						String resultAmount = formatter.format(amountd);
+						String resultRate = Double.toString(rated);
+						String resultValue = formatter.format(value);
+						
+						User user = new User(resultAmount,resultRate,years,resultValue);
+
+            request.setAttribute("user", user);
             //request.setAttribute("message", message);
         }
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
     }
+		
+		private double doMath (double amount, double rate, double years) {
+			double value = 0;
+			rate = rate/100;
+			value = amount*Math.pow((1+(rate)),years);
+			return value;
+		}
+		
     }
