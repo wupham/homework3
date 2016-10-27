@@ -3,12 +3,12 @@
     Copyright © 2016 Wes Upham and Sarah Hennenkamp
 */
 .main{
+    border-bottom-width: 0em;
     border-color: blue;
-    border-style: solid;
-    border-top-width: .2em;
     border-left-width: .2em;
     border-right-width: .2em;
-    border-bottom-width: 0em;
+    border-style: solid;
+    border-top-width: .2em;
     padding-bottom: 2em;
 }
 .main form {
@@ -21,9 +21,9 @@
 
 label {
     display: inline-block;
-    width: 10em;
-    text-align: right;
     padding: .2em;
+    text-align: right;
+    width: 10em;
 }
 
 input {
@@ -39,8 +39,8 @@ input {
 
 .main h1 {
     color: navy;
-    text-align: left;
     margin-left: 2.5em;
+    text-align: left;
 }
 
 #footer {
@@ -51,6 +51,41 @@ input {
 }
 
 #footer p {
-    text-align: left;
+    margin-bottom: 1em;
     margin-left: 5em;
+    margin-top: 1em;
+    text-align: left;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+td:nth-child(odd) {
+    padding-right: 1em;
+    text-align: right;
+}
+
+
+@media screen and (max-width: 400px){
+    h1{
+        font-size: 25px;
+    }
+    input[type=number] {
+        border-color: grey;
+        border-style: solid;
+        border-width: .2em;
+        margin-right: 2.5em;
+        text-align: left;
+    }
+    label{
+        text-align:left;
+    }
+    .button{
+        margin-right: 9em;
+    }
+    #footer{
+        font-size: 12px;
+        text-align: left;
+    }
+    
 }

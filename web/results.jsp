@@ -1,11 +1,26 @@
 <!--Copyright © 2016 Wes Upham and Sarah Hennenkamp--> 
 <%@ include file="/includes/header.html"%>
         <div class="main">
-					<jsp:useBean id="user" scope="request" class="edu.elon.calculate.User"/>
-					<h1>Future Value Calculator</h1>
-					<p>Investment Amount:   <jsp:getProperty name="user" property="amount"/></p>
-            <p>Yearly Interest Rate:   <jsp:getProperty name="user" property="rate"/></p>
-            <p>Number of Years:   <jsp:getProperty name="user" property="years"/></p>
-            <p>Future Value:   <jsp:getProperty name="user" property="value"/></p>
+            <jsp:useBean id="user" scope="request" class="edu.elon.calculate.User"/>
+                                        
+	<h1>Future Value Calculator</h1>
+        <table>
+        <tr>
+            <td>Investment Amount:</td>  
+            <td><jsp:getProperty name="user" property="amount"/></td>
+        </tr>
+        <tr>
+            <td>Yearly Interest Rate:</td>   
+            <td><jsp:getProperty name="user" property="rate"/></td>
+        </tr>
+        <tr>    
+            <td>Number of Years:</td>   
+            <td><jsp:getProperty name="user" property="years"/></td>
+        </tr>
+        <tr>
+            <td>Future Value:</td>   
+            <td><jsp:getProperty name="user" property="value"/></td>
+        </tr>
+        </table>
         </div>
 <%@ include file="includes/footer.html"%>
