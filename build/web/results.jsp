@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Copyright © 2016 Wes Upham and Sarah Hennenkamp--> 
+<!--Copyright © 2016 Wes Upham and Sarah Hennenkamp and Nick Richu--> 
 <%@ include file="/includes/header.html"%>
 <jsp:useBean id="user" scope="request" class="edu.elon.calculate.User"/>
 <div class="main">

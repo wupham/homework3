@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Copyright © 2016 Wes Upham and Sarah Hennenkamp--> 
+<!--Copyright © 2016 Wes Upham, Sarah Hennenkamp, and Nick Richu--> 
 <%@ include file="/includes/header.html"%>
 <div class="main">
   <h1>Future Value Calculator</h1>
