@@ -6,6 +6,7 @@ package edu.elon.calculate;
 
 import java.io.IOException;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -107,11 +108,20 @@ public class CalculateServlet extends HttpServlet {
 	 * @return value interest earned plus initial amount
 	 */
 	private double doMath(double amount, double rate, double years) {
-		double value = 0;
-		rate = rate / 100;
-		value = amount * Math.pow((1 + (rate)), years);
-		return value;
-	}
-}
+                
+                 ArrayList<Double> valueArray = new ArrayList<Double>();
+                
+                    double value = 0;
+                  for(int i=1; i<=years; i++){
+                    rate = rate / 100;
+                    value = amount * Math.pow((1 + (rate)), years);
+                    valueArray.add(value);
+                 
+        }
+                   return valueArray;    
+                    
+            }
+        }
+
 
 		
