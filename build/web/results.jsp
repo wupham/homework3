@@ -1,25 +1,27 @@
 <!--Copyright © 2016 Wes Upham and Sarah Hennenkamp and Nick Richu--> 
 <%@ include file="/includes/header.html"%>
 <%@taglib prefix="elon" uri="/WEB-INF/tlds/hw3tags.tld"  %>
-<jsp:useBean id="user" scope="request" class="edu.elon.calculate.User"/>
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
+
 <div class="main">
   <h1>Future Value Calculator</h1>
   <table>
     <tr>
       <td>Investment Amount:</td>  
-      <td><elon:currencyFormat /><jsp:getProperty name="user" property="amount"/></td>
+      <td><elon:currencyFormat amount="${user.amount}"/></td>
     </tr>
     <tr>
       <td>Yearly Interest Rate:</td>   
-      <td><jsp:getProperty name="user" property="rate"/></td>
+      <td><c:out value="${user.rate}"/></td>
     </tr>
     <tr>    
       <td>Number of Years:</td>   
-      <td><jsp:getProperty name="user" property="years"/></td>
+      <td><c:out value="${user.years}"/></td>
     </tr>
     <tr>
       <td>Future Value:</td>   
-      <td><jsp:getProperty name="user" property="value"/></td>
+      <td><elon:currencyFormat amount="${user.value}"/></td>
     </tr>
   </table>
 </div>

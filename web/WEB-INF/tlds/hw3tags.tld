@@ -14,38 +14,14 @@
         <name>currencyFormat</name>
         <tagclass>tags.currencyFormat</tagclass>
         <info>Returns the the currency tag</info>
-    </tag>
-
-    <tag>
-        <name>currentTime</name>
-        <tagclass>tags.CurrentTimeTag</tagclass>
-        <info>Returns the current time with the LONG time format</info>
-    </tag>
-    
-    <tag>
-        <name>currentTime</name>
-        <tagclass>murach.tags.CurrentTimeTag</tagclass>
-    </tag>
-
-    <tag>
-        <name>ifWeekday</name>
-        <tagclass>murach.tags.IfWeekdayTag</tagclass>
-        <bodycontent>JSP</bodycontent>
-    </tag>
-
-    <tag>
-        <name>ifEmptyMark</name>
-        <tagclass>murach.tags.IfEmptyMarkTag</tagclass>
-        <bodycontent>empty</bodycontent>
-        <attribute>
-            <name>color</name>
-            <required>false</required>
-        </attribute>
-        <attribute>
-            <name>field</name>
+         <attribute>
+            <name>amount</name>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>
+            <type>string</type>
         </attribute>
     </tag>
+    
+
 
 </taglib>
