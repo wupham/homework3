@@ -1,5 +1,5 @@
 /*
- Copyright © 2016 Wes Upham and Sarah Hennenkamp
+ Copyright © 2016 Wes Upham, Sarah Hennenkamp, and Nick Richu
  */
 package edu.elon.calculate;
 
