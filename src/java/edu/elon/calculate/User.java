@@ -4,26 +4,31 @@
 package edu.elon.calculate;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class User implements Serializable {
 
 	private String amount;
 	private double rate;
 	private double years;
-	private double value;
+	private ArrayList value;
+        private ArrayList numYears;
+        
 
 	public User() {
 		amount = "";
 		rate = 0;
 		years = 0;
-		value = 0;
+		value = null;
+                numYears = null;
 	}
 
-	public User(String amount, double rate, double years, double value) {
+	public User(String amount, double rate, double years, ArrayList value, ArrayList numYears) {
 		this.amount = amount;
 		this.rate = rate;
 		this.years = years;
 		this.value = value;
+                this.numYears = numYears;
 	}
 
 	/**
@@ -71,14 +76,25 @@ public class User implements Serializable {
 	/**
 	 * @return the value
 	 */
-	public double getValue() {
+	public ArrayList getValue() {
 		return value;
 	}
 
 	/**
 	 * @param value the value to set
 	 */
-	public void setValue(double value) {
+	public void setValue(ArrayList value) {
 		this.value = value;
+	}
+        
+        public ArrayList getNumYears() {
+		return numYears;
+	}
+
+	/**
+	 * @param numYears the value to set
+	 */
+	public void setNumYears(ArrayList numYears) {
+		this.numYears=numYears;
 	}
 }
