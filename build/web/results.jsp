@@ -26,7 +26,5 @@
                     <elon:currencyFormat amount="${user.value[i]}"/><br></c:forEach></p></td>       </tr>
     </table>
         <a href="calculate.jsp">Return to the Home page</a>
-</div>
-        
-   
+</div>   
 <%@ include file="includes/footer.html"%>
