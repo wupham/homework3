@@ -4,26 +4,31 @@
 package edu.elon.calculate;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class User implements Serializable {
 
 	private String amount;
-	private String rate;
-	private String years;
-	private String value;
+	private double rate;
+	private double years;
+	private ArrayList value;
+        private ArrayList numYears;
+        
 
 	public User() {
 		amount = "";
-		rate = "";
-		years = "";
-		value = "";
+		rate = 0;
+		years = 0;
+		value = null;
+                numYears = null;
 	}
 
-	public User(String amount, String rate, String years, String value) {
+	public User(String amount, double rate, double years, ArrayList value, ArrayList numYears) {
 		this.amount = amount;
 		this.rate = rate;
 		this.years = years;
 		this.value = value;
+                this.numYears = numYears;
 	}
 
 	/**
@@ -43,42 +48,53 @@ public class User implements Serializable {
 	/**
 	 * @return the rate
 	 */
-	public String getRate() {
+	public double getRate() {
 		return rate;
 	}
 
 	/**
 	 * @param rate the rate to set
 	 */
-	public void setRate(String rate) {
+	public void setRate(double rate) {
 		this.rate = rate;
 	}
 
 	/**
 	 * @return the years
 	 */
-	public String getYears() {
+	public double getYears() {
 		return years;
 	}
 
 	/**
 	 * @param years the years to set
 	 */
-	public void setYears(String years) {
+	public void setYears(double years) {
 		this.years = years;
 	}
 
 	/**
 	 * @return the value
 	 */
-	public String getValue() {
+	public ArrayList getValue() {
 		return value;
 	}
 
 	/**
 	 * @param value the value to set
 	 */
-	public void setValue(String value) {
+	public void setValue(ArrayList value) {
 		this.value = value;
+	}
+        
+        public ArrayList getNumYears() {
+		return numYears;
+	}
+
+	/**
+	 * @param numYears the value to set
+	 */
+	public void setNumYears(ArrayList numYears) {
+		this.numYears=numYears;
 	}
 }

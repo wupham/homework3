@@ -9,29 +9,26 @@ import static javax.servlet.jsp.tagext.Tag.SKIP_BODY;
 
 
 public class currencyFormat extends TagSupport {
-CalculateServlet class1 = new CalculateServlet();
-
-    @Override
+private String amount;
+ NumberFormat currency = NumberFormat.getCurrencyInstance();
+    
+    
+    	public void setAmount(double amount) {
+        this.amount = currency.format(amount) ;
+    }
+  
+ @Override
     public int doStartTag() throws JspException {
-        NumberFormat formatter = NumberFormat.getCurrencyInstance();
-        //get this shit to work. i want to access the variables in class1 which is an object of CalculateServlet
-        //were gucci if we can fgure this out, everything else will be smooth
-        String resultAmount = formatter.format(class1.getInitParameter("amountd"));
-	String resultValue = formatter.format(class1.getInitParameter("value"));
-	
+      
+ 
 
         try {
             JspWriter out = pageContext.getOut();
-            out.print(resultAmount);
+            out.print(amount);
         } catch (IOException ioe) {
             System.out.println(ioe);
         }
-        try {
-            JspWriter out = pageContext.getOut();
-            out.print(resultValue);
-        } catch (IOException ioe) {
-            System.out.println(ioe);
-        }
+       
         return SKIP_BODY;
     }
 }
